@@ -52,6 +52,7 @@ public class CapturingWand extends GenericWand {
                 try {
                     name = Class.forName(type).getSimpleName();
                 } catch (ClassNotFoundException e) {
+                    System.out.println("Type: " + type); //
                     name = "?";
                 }
                 list.add(TextFormatting.GREEN + "Captured mob: " + name);
