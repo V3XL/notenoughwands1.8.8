@@ -90,6 +90,7 @@ public class CapturingWand extends GenericWand {
     private EntityLivingBase createEntity(EntityPlayer player, World world, String type) {
         EntityLivingBase entityLivingBase;
         try {
+            System.out.println("Type we are getting: " + type);
             entityLivingBase = (EntityLivingBase) Class.forName(type).getConstructor(World.class).newInstance(world);
         } catch (Exception e) {
             entityLivingBase = null;
